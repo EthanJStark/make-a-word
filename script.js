@@ -11,8 +11,49 @@ function getLetters() {
 }
 
 function updateLetters() {
-  var newLetters = "ABCD"
-  document.getElementById("letters").innerHTML = newLetters;
+  document.getElementById("letters").innerHTML = randomLetters();
+}
+
+function randomLetters() {
+  var vowels = 'aeiou'.split('')
+  var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
+
+  var newLettersArray = []
+  var letter
+
+  for (i = 0; i < 2; ++i) {
+    var letter = vowels[Math.floor(Math.random()*vowels.length)]
+    newLettersArray.push(letter)
+  }
+
+  for (i = 0; i < 5; ++i) {
+    var letter = alphabet[Math.floor(Math.random()*alphabet.length)]
+    newLettersArray.push(letter)
+  }
+
+  function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+
+  newLetters = shuffle(newLettersArray).join("").toUpperCase()
+
+  return newLetters
+
 }
 
 // A function to get the user's guess
