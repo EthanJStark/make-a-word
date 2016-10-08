@@ -1,0 +1,9 @@
+.big-mono {
+  font-family: monospace;
+  font-size: 2em;
+}
+
+.notice {
+  margin-top: 1em;
+  font-style: italic;
+}
