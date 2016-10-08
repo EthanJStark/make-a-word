@@ -10,6 +10,11 @@ function getLetters() {
   return letters;
 }
 
+function updateLetters() {
+  var newLetters = "ABCD"
+  document.getElementById("letters").innerHTML = newLetters;
+}
+
 // A function to get the user's guess
 function getGuess() {
   // Select the input element where the user enters their guess
