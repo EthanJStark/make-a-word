@@ -15,21 +15,26 @@
 
 </head>
 <body>
-  <div id="letters" class="big-mono">
-    OPMARGR
-  </div>
-
-  <section id="guess-area">
-    <input type="text" id="word-guess">
-
-    <button onclick="checkGuess()">Guess</button>
-    <button onclick="shuffleLetters()">Shuffle Letters</button>
-    <button onclick="updateLetters()">Update Letters</button>
-
-    <div id="game-message" class="notice">
-      Enter your first guess!
+  <div class="jumbotron">
+    <h3>Make-A-Word</h3>
+    <div id="letters" class="h1">
+      OPMARGR
     </div>
-  </section>
+
+    <section id="guess-area">
+      <div class="input">
+        <input type="text" id="word-guess">
+        <button onclick="checkGuess()">Guess</button>
+      </div>
+
+      <button onclick="shuffleLetters()">Shuffle Letters</button>
+      <button onclick="updateLetters()">Update Letters</button>
+
+      <div id="game-message" class="notice">
+        Enter your first guess!
+      </div>
+    </section>
+  </div>
 </body>
 
 <script type="text/javascript" src="script.js"></script>

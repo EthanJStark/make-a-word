@@ -1,6 +1,10 @@
-.big-mono {
-  font-family: monospace;
-  font-size: 2em;
+div.jumbotron {
+  text-align: center;
+  background-color: white;
+}
+
+.input {
+  margin: 10px;
 }
 
 .notice {
