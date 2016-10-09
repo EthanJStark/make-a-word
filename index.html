@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-<meta name="description" content="Make-a-Word challenge for the Learners Guild Enrollment Game: https://learnathon.learnersguild.org/">
-    <meta charset="utf-8">
-    <title>Make a Word</title>
+<head>
+  <meta name="description" content="Make-a-Word challenge for the Learners Guild Enrollment Game: https://learnathon.learnersguild.org/">
+  <meta charset="utf-8">
+  <title>Make a Word</title>
 
-    <link rel="stylesheet" href="main.css" media="screen" charset="utf-8">
-  </head>
-  <body>
-    <div id="letters" class="big-mono">
-      OPMARGR
+  <link rel="stylesheet" href="main.css" media="screen" charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script src=http://code.jquery.com/jquery-3.1.1.min.js></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div id="letters" class="big-mono">
+    OPMARGR
+  </div>
+
+  <section id="guess-area">
+    <input type="text" id="word-guess">
+
+    <button onclick="checkGuess()">Guess</button>
+    <button onclick="shuffleLetters()">Shuffle Letters</button>
+    <button onclick="updateLetters()">Update Letters</button>
+
+    <div id="game-message" class="notice">
+      Enter your first guess!
     </div>
+  </section>
+</body>
 
-    <section id="guess-area">
-      <input type="text" id="word-guess">
+<script type="text/javascript" src="script.js"></script>
 
-      <button onclick="checkGuess()">Guess</button>
-      <button onclick="updateLetters()">Update Letters</button>
+<script type="text/javascript" src="https://rawgit.com/lg-bot/343694d651adedd80dfd458f20869f57/raw/39e5dba5b89cc9f48b9aa8ab6ec6f8bc78e34c03/tests.js"></script>
 
-      <div id="game-message" class="notice">
-        Enter your first guess!
-      </div>
-    </section>
-  </body>
-
-  <script type="text/javascript" src="script.js"></script>
-
-  <script type="text/javascript" src="https://rawgit.com/lg-bot/343694d651adedd80dfd458f20869f57/raw/39e5dba5b89cc9f48b9aa8ab6ec6f8bc78e34c03/tests.js"></script>
 </html>

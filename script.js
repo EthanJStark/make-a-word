@@ -61,9 +61,12 @@ function shuffle(string) {
   array = string.split('')
 
   array = shuffleArray(array)
-
   return array.join("")
 
+}
+
+function shuffleLetters() {
+  document.getElementById("letters").innerHTML = shuffle(getLetters())
 }
 
 // A function to get the user's guess
